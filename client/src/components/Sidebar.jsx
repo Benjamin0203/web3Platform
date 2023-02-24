@@ -41,7 +41,7 @@ const Sidebar = () => {
           {navlinks.map((link, index) => (
             <Icon
               key={link.name}
-              styles="w-[52px] h-[52px]"
+              styles="w-[52px] h-[52px] shadow-lg"
               {...link}
               isActive={isActive}
               handleClick={() => {
@@ -53,6 +53,7 @@ const Sidebar = () => {
             />
           ))}
         </div>
+        <Icon styles="bg-[#FAF9F6] shadow-lg" imageUrl={sun} />
       </div>
     </div>
   );
