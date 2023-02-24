@@ -13,6 +13,8 @@ import money from './money.svg';
 import loader from './loader.svg';
 import thirdweb from './thirdweb.png';
 import happyEmoji from './happyEmoji.svg';
+import BMLogo from './BMLogo.png';
+import happy from './happy.png';
 
 export {
   tagType,
@@ -30,4 +32,6 @@ export {
   loader,
   thirdweb,
   happyEmoji,
+  BMLogo,
+  happy,
 };
