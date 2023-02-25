@@ -23,17 +23,17 @@ export const StateContextProvider = ({ children }) => {
 
   const publishCampaign = async (form) => {
     try {
-      const data = await createCampaign(
+      const data = await createCampaign([
         address,
         form.title,
         form.description,
         form.target,
         new Date(form.deadline).getTime(),
-        form.image
-      );
+        form.image,
+      ]);
       console.log("contract write", data);
     } catch (error) {
-      console.error(error);
+      console.log("contract call failure", error);
     }
   };
   return (

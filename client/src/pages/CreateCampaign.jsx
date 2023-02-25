@@ -33,6 +33,7 @@ const CreateCampaign = () => {
           ...form,
           target: ethers.utils.parseUnits(form.target, 18),
         });
+        console.log("");
         setIsLoading(false);
         navigate("/");
       } else {
@@ -45,7 +46,7 @@ const CreateCampaign = () => {
   return (
     <div className="flex flex-col justify-center items-center sm:p-10 p-4 rounded-[10px] bg-white">
       {isLoading && "is loading..."}
-      <div className="flex justify-center items-center p-[16px] rounded-[10px] sm:min-w-[380px] bg-[#8ff286]">
+      <div className="flex justify-center items-center p-[16px] rounded-[10px] sm:min-w-[380px] bg-[#6bf8fb]">
         <h1 className="font-bold sm:text-[25px] text-[18px] leading-[38px] text-red-700">
           Create New
         </h1>
