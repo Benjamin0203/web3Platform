@@ -36,9 +36,25 @@ export const StateContextProvider = ({ children }) => {
       console.log("contract call failure", error);
     }
   };
+
+  const getCampaigns = async () => {
+    try {
+      const campaigns = await contract.call("getCampaigns");
+      console.log("contract read", campaigns);
+    } catch (error) {
+      console.log("contract call failure", error);
+    }
+  };
+
   return (
     <StateContext.Provider
-      value={{ address, contract, connect, createCampaign: publishCampaign }}
+      value={{
+        address,
+        contract,
+        connect,
+        createCampaign: publishCampaign,
+        getCampaigns,
+      }}
     >
       {children}
     </StateContext.Provider>
