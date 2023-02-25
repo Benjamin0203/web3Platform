@@ -57,6 +57,7 @@ export const StateContextProvider = ({ children }) => {
       });
 
       console.log("parsedCampaigns: ", parsedCampaigns);
+      return parsedCampaigns;
     } catch (error) {
       console.log("contract call failure", error);
     }

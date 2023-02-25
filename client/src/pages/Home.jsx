@@ -18,7 +18,7 @@ const Home = () => {
 
   useEffect(() => {
     if (contract) fetchCampaigns();
-  }, [contract, address]);
+  }, [address, contract]);
 
   return (
     <DisplayCampaigns
