@@ -31,8 +31,8 @@ const CreateCampaign = () => {
       <form onSubmit={handleSubmit} className="flex flex-col gap-7 w-full mt-8">
         <div className=" flex flex-wrap gap-10">
           <FormField
-            labelName="Item Title"
-            placeHolder="Enter item title"
+            labelName="Your Name"
+            placeHolder="Enter name here"
             inputType="text"
             value={form.title}
             handleChange={() => {}}
@@ -44,6 +44,33 @@ const CreateCampaign = () => {
             value={form.title}
             handleChange={() => {}}
           />
+        </div>
+        <FormField
+          labelName="content"
+          placeHolder="Enter item content"
+          isTextArea
+          inputType="text"
+          value={form.description}
+          handleChange={() => {}}
+        />
+        <div className="flex flex-wrap gap-10">
+          <FormField
+            labelName="Target"
+            placeHolder="Enter item title"
+            inputType="text"
+            value={form.target}
+            handleChange={() => {}}
+          />
+          <FormField
+            labelName="Deadline"
+            placeHolder="Enter item title"
+            inputType="text"
+            value={form.deadline}
+            handleChange={() => {}}
+          />
+        </div>
+        <div className="flex justify-center items-center">
+          <CustomButton btnType="submit" title="Submit" />
         </div>
       </form>
     </div>
