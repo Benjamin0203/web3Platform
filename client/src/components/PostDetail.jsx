@@ -15,19 +15,25 @@ const PostDetail = ({
   const remainingDays = daysLeft(deadline);
 
   return (
-    <div className="cursor-pointer flex-1 flex-col" onClick={handleClick}>
+    <div className="cursor-pointer h-full items-center" onClick={handleClick}>
+      <h2 className="font-bold">{title}</h2>
       <img
         src={image}
-        alt="fund"
-        className="object-fill rounded-lg w-[400px] h-[400px]"
+        alt="postdetailImage"
+        className="object-fill rounded-lg w-[400px] h-[400px] sm:w-[200px] sm:h-[200px]"
       />
       <div className="block mb-2">
-        <h2>{title}</h2>
         <p>{description}</p>
       </div>
       <div className="block">
         <h2>target: {target}</h2>
         <p>collected: {amountCollected}</p>
+      </div>
+      <div className="flex items-center mt-3 gap-2">
+        <p className="flex-1">
+          {" "}
+          author: <span className="text-red-500 text-ellipsis">{owner}</span>
+        </p>
       </div>
     </div>
   );
