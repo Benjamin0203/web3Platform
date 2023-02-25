@@ -17,13 +17,20 @@ const CreateCampaign = () => {
     image: "",
   });
 
-  const handleSubmit = () => {};
+  const handleFormChange = (fieldName, e) => {
+    setForm({ ...form, [fieldName]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(form);
+  };
 
   return (
     <div className="flex flex-col justify-center items-center sm:p-10 p-4 rounded-[10px] bg-white">
       {isLoading && "is loading..."}
       <div className="flex justify-center items-center p-[16px] rounded-[10px] sm:min-w-[380px] bg-[#8ff286]">
-        <h1 className="font-epilogue font-bold sm:text-[25px] text-[18px] leading-[38px] text-red-700">
+        <h1 className="font-bold sm:text-[25px] text-[18px] leading-[38px] text-red-700">
           Create New
         </h1>
       </div>
@@ -34,15 +41,15 @@ const CreateCampaign = () => {
             labelName="Your Name"
             placeHolder="Enter name here"
             inputType="text"
-            value={form.title}
-            handleChange={() => {}}
+            value={form.name}
+            handleChange={(e) => handleFormChange("name", e)}
           />
           <FormField
             labelName="Item Title"
             placeHolder="Enter item title"
             inputType="text"
             value={form.title}
-            handleChange={() => {}}
+            handleChange={(e) => handleFormChange("title", e)}
           />
         </div>
         <FormField
@@ -51,7 +58,7 @@ const CreateCampaign = () => {
           isTextArea
           inputType="text"
           value={form.description}
-          handleChange={() => {}}
+          handleChange={(e) => handleFormChange("description", e)}
         />
         <div className="flex flex-wrap gap-10">
           <FormField
@@ -59,16 +66,23 @@ const CreateCampaign = () => {
             placeHolder="Enter item title"
             inputType="text"
             value={form.target}
-            handleChange={() => {}}
+            handleChange={(e) => handleFormChange("target", e)}
           />
           <FormField
             labelName="Deadline"
             placeHolder="Enter item title"
-            inputType="text"
+            inputType="date"
             value={form.deadline}
-            handleChange={() => {}}
+            handleChange={(e) => handleFormChange("deadline", e)}
           />
         </div>
+        <FormField
+          labelName="Insert image"
+          placeHolder="Insert image url"
+          inputType="url"
+          value={form.image}
+          handleChange={(e) => handleFormChange("image", e)}
+        />
         <div className="flex justify-center items-center">
           <CustomButton btnType="submit" title="Submit" />
         </div>
