@@ -13,7 +13,9 @@ export const calculateBarPercentage = (goal, raisedAmount) => {
 
 export const checkIfImage = (url, callback) => {
   const img = new Image();
-  img.src = url;
+  url === ""
+    ? img.src = "https://reactnativecode.com/wp-content/uploads/2018/02/Default_Image_Thumbnail.png"
+    : img.src = url;
 
   if (img.complete) callback(true);
 

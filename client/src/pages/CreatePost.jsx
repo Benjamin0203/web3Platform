@@ -63,7 +63,7 @@ const CreatePost = () => {
           />
           <FormField
             labelName="Item Title"
-            placeHolder="Enter item title"
+            placeHolder="Title"
             inputType="text"
             value={form.title}
             handleChange={(e) => handleFormChange("title", e)}
@@ -71,7 +71,7 @@ const CreatePost = () => {
         </div>
         <FormField
           labelName="content"
-          placeHolder="Enter item content"
+          placeHolder="Write something about your post..."
           isTextArea
           inputType="text"
           value={form.description}
@@ -79,15 +79,15 @@ const CreatePost = () => {
         />
         <div className="flex flex-wrap gap-10">
           <FormField
-            labelName="Target"
-            placeHolder="Enter item title"
+            labelName="Maximun Support"
+            placeHolder="ETH (numbers only)"
             inputType="text"
             value={form.target}
             handleChange={(e) => handleFormChange("target", e)}
           />
           <FormField
-            labelName="Deadline"
-            placeHolder="Enter item title"
+            labelName="Post Expire Date"
+            placeHolder=""
             inputType="date"
             value={form.deadline}
             handleChange={(e) => handleFormChange("deadline", e)}
@@ -95,7 +95,7 @@ const CreatePost = () => {
         </div>
         <FormField
           labelName="Insert image"
-          placeHolder="Insert image url"
+          placeHolder="Image url"
           inputType="url"
           value={form.image}
           handleChange={(e) => handleFormChange("image", e)}

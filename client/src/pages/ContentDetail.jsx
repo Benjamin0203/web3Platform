@@ -6,7 +6,7 @@ import { useStateContext } from "../context";
 import { CustomButton } from "../components";
 import { thirdweb } from "../assets";
 
-const PostDetail = () => {
+const ContentDetail = () => {
   const { state } = useLocation();
   const navigate = useNavigate();
   const { donate, getDonations, contract, address } = useStateContext();
@@ -34,17 +34,30 @@ const PostDetail = () => {
     <div>
       {isLoading && "Loading..."}
       <div>
-        Author: <span className="font-bold text-red-500">{state.owner}</span>
+        <h2 className="font-bold uppercase text-[40px] hover:text-green-400">
+          {state.title}
+        </h2>
+      </div>
+      <div>
+        Author:{" "}
+        <span className="font-bold text-red-500 hover:text-yellow-300">
+          {state.owner}
+        </span>
       </div>
 
       <div>
-        <p>target: {state.target}</p>
-        <p>received: {state.amountCollected}</p>
+        {/* <p>target: {state.target}</p> */}
+        <p>Supports: {state.amountCollected} ETH</p>
+      </div>
+      <div className="border-4 border-red-600/[.55] rounded-lg text-[18px] leading-5">
+        {state.description}
       </div>
 
       <div>
-        <h3 className="my-5">Support: </h3>
-        <div className="mt-10">
+        <h3 className="my-2 text-xl">
+          Like this post? Consider supporting the author!😍{" "}
+        </h3>
+        <div className="mt-5">
           <input
             type="number"
             placeholder="ETH 0.1"
@@ -66,4 +79,4 @@ const PostDetail = () => {
   );
 };
 
-export default PostDetail;
+export default ContentDetail;

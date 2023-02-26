@@ -26,13 +26,13 @@ const PostDetail = ({
         <p>{description}</p>
       </div>
       <div className="block">
-        <h2>
+        {/* <h2>
           target: <span className="text-green-400 font-semibold">ETH</span>
           {target}
-        </h2>
+        </h2> */}
         <p>
-          collected:<span className="text-green-400 font-semibold">ETH</span>{" "}
-          {amountCollected}
+          Supports: {amountCollected}
+          <span className="text-green-800 font-semibold"> ETH</span>{" "}
         </p>
       </div>
       <div className="flex items-center mt-3 gap-2">

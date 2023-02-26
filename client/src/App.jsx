@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Home, Profile, PostDetail, CreatePost } from "./pages";
+import { Home, Profile, ContentDetail, CreatePost } from "./pages";
 import { Sidebar, Navbar } from "./components";
 
 export default function App() {
@@ -15,7 +15,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/create-campaign" element={<CreatePost />} />
-          <Route path="/campaign-details/:id" element={<PostDetail />} />
+          <Route path="/campaign-details/:id" element={<ContentDetail />} />
         </Routes>
       </div>
     </div>
