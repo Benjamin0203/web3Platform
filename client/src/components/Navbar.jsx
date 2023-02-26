@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="sm:flex hidden flex-row justify-end gap-4">
         <CustomButton
           btnType="button"
-          title={address ? "Create a campaign" : "Connect"}
+          title={address ? "Make a post" : "Connect"}
           styles={address ? "bg-[#FAF9F6`]" : "bg-[#4acd8d]"}
           handleClick={() => {
             if (address) navigate("create-campaign");
