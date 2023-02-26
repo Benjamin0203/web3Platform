@@ -32,7 +32,10 @@ const DisplayCampaigns = ({ title, isLoading, campaigns }) => {
               <PostDetail
                 key={index}
                 {...campaign}
-                onClick={() => handleNavigate(campaign)}
+                handleClick={() => {
+                  handleNavigate(campaign);
+                  console.log("clicked");
+                }}
               />
             );
           })}
