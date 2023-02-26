@@ -6,7 +6,7 @@ import { CustomButton, FormField } from "../components";
 import { checkIfImage } from "../utils";
 import { useStateContext } from "../context";
 
-const CreateCampaign = () => {
+const CreatePost = () => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
   const { createCampaign } = useStateContext();
@@ -63,7 +63,7 @@ const CreateCampaign = () => {
           />
           <FormField
             labelName="Item Title"
-            placeHolder="Enter item title"
+            placeHolder="Title"
             inputType="text"
             value={form.title}
             handleChange={(e) => handleFormChange("title", e)}
@@ -71,7 +71,7 @@ const CreateCampaign = () => {
         </div>
         <FormField
           labelName="content"
-          placeHolder="Enter item content"
+          placeHolder="Write something about your post..."
           isTextArea
           inputType="text"
           value={form.description}
@@ -79,15 +79,15 @@ const CreateCampaign = () => {
         />
         <div className="flex flex-wrap gap-10">
           <FormField
-            labelName="Target"
-            placeHolder="Enter item title"
+            labelName="Maximun Support"
+            placeHolder="ETH (numbers only)"
             inputType="text"
             value={form.target}
             handleChange={(e) => handleFormChange("target", e)}
           />
           <FormField
-            labelName="Deadline"
-            placeHolder="Enter item title"
+            labelName="Post Expire Date"
+            placeHolder=""
             inputType="date"
             value={form.deadline}
             handleChange={(e) => handleFormChange("deadline", e)}
@@ -95,7 +95,7 @@ const CreateCampaign = () => {
         </div>
         <FormField
           labelName="Insert image"
-          placeHolder="Insert image url"
+          placeHolder="Image url"
           inputType="url"
           value={form.image}
           handleChange={(e) => handleFormChange("image", e)}
@@ -108,4 +108,4 @@ const CreateCampaign = () => {
   );
 };
 
-export default CreateCampaign;
+export default CreatePost;

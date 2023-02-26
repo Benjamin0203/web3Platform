@@ -15,6 +15,7 @@ import thirdweb from './thirdweb.png';
 import happyEmoji from './happyEmoji.svg';
 import BMLogo from './BMLogo.png';
 import happy from './happy.png';
+import news from './news.svg';
 
 export {
   tagType,
@@ -34,4 +35,5 @@ export {
   happyEmoji,
   BMLogo,
   happy,
+  news,
 };

@@ -80,4 +80,14 @@ contract CrowdFunding {
 
         return allCampaigns;
     }
+
+    //delete a campaign
+    function deleteCampaign(uint256 _id) public {
+        Campaign storage campaign = campaigns[_id];
+        require(
+            campaign.owner == msg.sender,
+            "You are not the owner of this campaign"
+        );
+        delete campaigns[_id];
+    }
 }

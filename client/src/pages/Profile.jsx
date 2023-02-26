@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useStateContext } from "../context";
 
-import { DisplayCampaigns } from "../components";
+import { Displayposts } from "../components";
 
 const Profile = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -21,7 +21,7 @@ const Profile = () => {
   }, [address, contract]);
 
   return (
-    <DisplayCampaigns
+    <Displayposts
       title="My Posts"
       isLoading={isLoading}
       campaigns={campaigns}

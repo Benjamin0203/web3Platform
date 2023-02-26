@@ -53,7 +53,7 @@ const Sidebar = () => {
             />
           ))}
         </div>
-        <Icon styles="bg-[#FAF9F6] shadow-lg" imageUrl={sun} />
+        {/* <Icon styles="bg-[#FAF9F6] shadow-lg" imageUrl={sun} /> */}
       </div>
     </div>
   );
