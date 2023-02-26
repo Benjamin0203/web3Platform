@@ -2,9 +2,9 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import { loader } from "../assets";
-import { PostDetail } from "../components";
+import { PostDetail } from ".";
 
-const DisplayCampaigns = ({ title, isLoading, campaigns }) => {
+const Displayposts = ({ title, isLoading, campaigns }) => {
   const navigate = useNavigate();
   const handleNavigate = (campaign) => {
     navigate(`/campaign-details/${campaign.title}`, { state: campaign });
@@ -44,4 +44,4 @@ const DisplayCampaigns = ({ title, isLoading, campaigns }) => {
   );
 };
 
-export default DisplayCampaigns;
+export default Displayposts;

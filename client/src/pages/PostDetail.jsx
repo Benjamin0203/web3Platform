@@ -6,7 +6,7 @@ import { useStateContext } from "../context";
 import { CustomButton } from "../components";
 import { thirdweb } from "../assets";
 
-const Campaign = () => {
+const PostDetail = () => {
   const { state } = useLocation();
   const navigate = useNavigate();
   const { donate, getDonations, contract, address } = useStateContext();
@@ -66,4 +66,4 @@ const Campaign = () => {
   );
 };
 
-export default Campaign;
+export default PostDetail;

@@ -6,7 +6,7 @@ import { CustomButton, FormField } from "../components";
 import { checkIfImage } from "../utils";
 import { useStateContext } from "../context";
 
-const CreateCampaign = () => {
+const CreatePost = () => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
   const { createCampaign } = useStateContext();
@@ -108,4 +108,4 @@ const CreateCampaign = () => {
   );
 };
 
-export default CreateCampaign;
+export default CreatePost;
