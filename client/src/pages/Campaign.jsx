@@ -32,12 +32,18 @@ const Campaign = () => {
 
   return (
     <div>
-      {isLoading && <Loader />}
+      {isLoading && "Loading..."}
       <div>
         Author: <span className="font-bold text-red-500">{state.owner}</span>
       </div>
+
       <div>
-        <h3>Support</h3>
+        <p>target: {state.target}</p>
+        <p>received: {state.amountCollected}</p>
+      </div>
+
+      <div>
+        <h3 className="my-5">Support: </h3>
         <div className="mt-10">
           <input
             type="number"
@@ -49,6 +55,12 @@ const Campaign = () => {
             onChange={(e) => setAmount(e.target.value)}
           />
         </div>
+        <CustomButton
+          btnType="button"
+          title="Support this post"
+          handleClick={handleDonate}
+          styles="mt-5"
+        />
       </div>
     </div>
   );
