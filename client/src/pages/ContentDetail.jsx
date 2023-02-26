@@ -49,7 +49,7 @@ const ContentDetail = () => {
         {/* <p>target: {state.target}</p> */}
         <p>Supports: {state.amountCollected} ETH</p>
       </div>
-      <div className="border-4 border-red-600/[.55] rounded-lg text-[18px] leading-5">
+      <div className="border-4 border-red-600/[.55] rounded-lg text-[18px] leading-5 block md-2">
         {state.description}
       </div>
 
