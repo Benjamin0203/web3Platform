@@ -7,6 +7,7 @@ import {
 } from "@thirdweb-dev/react";
 import { ethers } from "ethers";
 
+//define the context
 const StateContext = createContext();
 
 export const StateContextProvider = ({ children }) => {
